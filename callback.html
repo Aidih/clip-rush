@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Signing in · Clip Rush</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="name" href="index.html">Clip Rush</a>
+  </header>
+  <main>
+    <h1>Finishing sign-in…</h1>
+    <p>Sending you back to the Clip Rush app on this computer. If nothing happens, make sure the Clip Rush sign-in command is still running, then try signing in again.</p>
+  </main>
+  <script>
+    // TikTok redirects here (it does not accept localhost redirect URIs).
+    // Hand the authorization code and state to the Clip Rush desktop app,
+    // which is listening only on this computer. Nothing is sent anywhere else.
+    location.replace("http://localhost:8765/callback" + location.search);
+  </script>
+</body>
+</html>
